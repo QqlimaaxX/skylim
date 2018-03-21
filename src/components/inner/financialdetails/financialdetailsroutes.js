@@ -13,7 +13,7 @@ const financialDetails = () => import('./financialDetails.vue')
 
 export default [
 	{
-		path:'/financialdetails',
+		path:'/app/financialdetails',
 		name:"financialdetails",
 		component:financialDetails,		
 	  	children:[{

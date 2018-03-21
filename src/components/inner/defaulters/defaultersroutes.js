@@ -12,7 +12,7 @@ const detention = () => import('./detention/detention.vue')
 
 export default [
 	{
-		path:"/defaulters",
+		path:"/app/defaulters",
 		name:"defaulters",
 		component:defaulters,
 		children:[{

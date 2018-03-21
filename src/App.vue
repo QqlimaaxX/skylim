@@ -2,6 +2,8 @@
   <div id="app">
     <header-comp></header-comp>
     <router-view></router-view>
+    <router-view name="navbar"></router-view>
+    <router-view name="sidebar"></router-view>
   </div>
 </template>
 

@@ -14,13 +14,14 @@ const transport = () => import('./transport/transport.vue')
 
 export default [
     {
-        path: '/profile', 
+        path: '/app/profile', 
         name: 'profile', 
         component: profile,
         children:[{
             path: 'general', 
             name: 'general', 
-            component: general
+            component: general,
+            // components:{special:general}
             },
             {
             path: 'update', 

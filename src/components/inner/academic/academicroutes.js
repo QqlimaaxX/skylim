@@ -14,11 +14,12 @@ const academic = () => import('./academic.vue')
 // import academic from './academic.vue';
 
 export default [
-  {		path:"/academic",
+  	{	
+  		path:"/app/academic",
   		name:"academic",
   		component:academic,
   		children:[{
-	        path: 'attendance', 
+	        path: 'attendance',
 	        name: 'attendance', 
 	        component: attendance
   		},{
