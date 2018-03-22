@@ -5,7 +5,7 @@ const feedback = () => import('./feedback.vue')
 
 export default [
     {
-        path: '/app/feedback', 
+        path: 'feedback', 
         name: 'feedback', 
         component: feedback,
     }

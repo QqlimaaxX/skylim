@@ -3,7 +3,6 @@ import VueRouter from 'vue-router';
 
 //lazy loading
 const inner = () => import('../components/inner/inner.vue')
-const fnf = () => import('../components/errors/fnf.vue')
 const Home = () => import('../components/Home.vue')
 
 import innerroutes from '../components/inner/innerroutes.js';
@@ -22,22 +21,24 @@ var loginValidator = {
     }
 }
 
-export default [
-	{
-    	path: '/',
-    	name: 'Home',
-    	component: Home
-  	},
-  	{
-    	path:'/app/*',
-    	name:'app',
-    	components:{
-      		sidebar:sidebar,
-      		navbar:navbar,
-      		default:inner
-    	},
-    	...loginValidator,
-	    children:[...innerroutes]
-	},
-	...errorroutes,
-]
+export default new VueRouter({
+  routes:[
+  {
+      path: '/',
+      name: 'Home',
+      component: Home
+    },
+    {
+      path:'/app',
+      name:'app',
+      components:{
+          sidebar:sidebar,
+          navbar:navbar,
+          default:inner
+      },
+      ...loginValidator,
+      children:[...innerroutes]
+  },
+  ...errorroutes,
+],
+})

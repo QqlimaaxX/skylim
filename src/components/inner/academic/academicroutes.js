@@ -15,7 +15,7 @@ const academic = () => import('./academic.vue')
 
 export default [
   	{	
-  		path:"/app/academic",
+  		path:"academic",
   		name:"academic",
   		component:academic,
   		children:[{

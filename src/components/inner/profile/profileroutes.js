@@ -5,7 +5,6 @@ const profile = () => import('./profile.vue')
 const hostels = () => import('./hostels/hostels.vue')
 const transport = () => import('./transport/transport.vue')
 
-
 // import update from './update/update.vue'
 // import general from './general/general.vue'
 // import profile from './profile.vue'
@@ -14,29 +13,29 @@ const transport = () => import('./transport/transport.vue')
 
 export default [
     {
-        path: '/app/profile', 
+        path: 'profile', 
         name: 'profile', 
         component: profile,
-        children:[{
-            path: 'general', 
-            name: 'general', 
-            component: general,
-            // components:{special:general}
+        children:[
+            {
+                path: 'general', 
+                name: 'general', 
+                component: general,
             },
             {
-            path: 'update', 
-            name: 'update', 
-            component: update
+                path: 'update', 
+                name: 'update', 
+                component: update
             },
             {
-            path: 'hostels', 
-            name: 'hostels', 
-            component: hostels
+                path: 'hostels', 
+                name: 'hostels', 
+                component: hostels
             },
             {
-            path: 'transport', 
-            name: 'transport', 
-            component: transport
+                path: 'transport', 
+                name: 'transport', 
+                component: transport
             }
         ]
     },
