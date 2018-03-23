@@ -1,10 +1,10 @@
 <template>
-	<div class='ui container segment'>
-      <h2>FinancialDetails</h2>
+	<div class='financialDetails'>
+      <!-- <h2>FinancialDetails</h2>
       <router-link :to="{name:'feestructure'}" class="ui button">FeeStructure</router-link>
       <router-link :to="{name:'feedue'}" class="ui button">FeeStructure</router-link>
       <router-link :to="{name:'feepaid'}" class="ui button">FeeStructure</router-link>
-      <hr>
+      <hr> -->
       <router-view></router-view>
 	</div>
 </template>

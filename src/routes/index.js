@@ -8,7 +8,7 @@ const Home = () => import('../components/Home.vue')
 
 import innerroutes from '../components/inner/innerroutes.js';
 import errorroutes from '../components/errors/errorroutes.js';
-import sidebar from '../components/sidebar.vue';
+// import sidebar from '../components/sidebar.vue';
 import navbar from '../components/navbar.vue';
 
 function isLoggedin(){
@@ -32,7 +32,7 @@ export default [
     	path:'/app/*',
     	name:'app',
     	components:{
-      		sidebar:sidebar,
+      		// sidebar:sidebar,
       		navbar:navbar,
       		default:inner
     	},
