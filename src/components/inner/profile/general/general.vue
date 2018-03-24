@@ -2,7 +2,7 @@
   <v-app>
     <div class="main">
 
-      <v-container fluid grid-list-lg style="margin-top:20px">
+      <v-container fluid grid-list-lg>
 
         <v-layout row wrap class="text-xs-left">
 
@@ -66,7 +66,7 @@
                 </v-layout>
               </v-container>
               <hr class="style14">
-              <v-container style="font-size:16px">
+              <v-container style="font-size:16px" class="pb-0">
 
                 <v-layout row wrap>
 
@@ -149,7 +149,7 @@
 
                 </v-layout>
                 <hr>
-                <v-layout row wrap>
+                <v-layout row wrap >
                   <v-flex lg3 xs3>
                     <span>Mother Name:</span>
                   </v-flex>

@@ -15,3 +15,10 @@ export default {
   components:{HeaderComp}
 }
 </script>
+
+<style scoped>
+#app {
+  position: fixed;
+  width: 100%;
+}
+</style>
