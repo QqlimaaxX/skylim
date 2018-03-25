@@ -16,67 +16,23 @@
                   <tr>
                   <th>COURSE CODE</th>
                   <th>COURSE TITLE</th>
-                  <th>TOTAL CREDITS</th>
-                  <th>GRADE</th>
-                  <th>GRADE POINT</th>
+                  <th>FACULTY NAME</th>
+                  <th>SURPRISE TEST</th>
+                  <th>ASSIGNMENT</th>
+                  <th>TEST 1</th>
+                  <th>TEST 2</th>
 				  </tr>
                     
-                    <tr>
-                      <td>15SE203</td>
-                      <td>SOFTWARE ENGINEERING PRINCIPLES</td>
-                      <td>3</td>
-                      <td>A+</td>
-                      <td>9</td>
+                    <tr v-for="(record,i) in records" :key=i>
+                      <td>{{record.code}}</td>
+                      <td>{{record.title}}</td>
+                      <td>{{record.facName}}</td>
+                      <td>{{record.surpTest}}</td>
+                      <td>{{record.assgn}}</td>
+                      <td>{{record.test1}}</td>
+                      <td>{{record.test2}}</td>
                     </tr>
-                    <tr>
-                      <td>15SE203</td>
-                      <td>SOFTWARE ENGINEERING PRINCIPLES</td>
-                      <td>3</td>
-                      <td>A+</td>
-                      <td>9</td>
-                    </tr>
-                    <tr>
-                      <td>15SE203</td>
-                      <td>SOFTWARE ENGINEERING PRINCIPLES</td>
-                      <td>3</td>
-                      <td>A+</td>
-                      <td>9</td>
-                    </tr>
-                    <tr>
-                      <td>15SE203</td>
-                      <td>SOFTWARE ENGINEERING PRINCIPLES</td>
-                      <td>3</td>
-                      <td>A+</td>
-                      <td>9</td>
-                    </tr>
-                    <tr>
-                      <td>15SE203</td>
-                      <td>SOFTWARE ENGINEERING PRINCIPLES</td>
-                      <td>3</td>
-                      <td>A+</td>
-                      <td>9</td>
-                    </tr>
-                    <tr>
-                      <td>15SE203</td>
-                      <td>SOFTWARE ENGINEERING PRINCIPLES</td>
-                      <td>3</td>
-                      <td>A+</td>
-                      <td>9</td>
-                    </tr>
-                    <tr>
-                      <td>15SE203</td>
-                      <td>SOFTWARE ENGINEERING PRINCIPLES</td>
-                      <td>3</td>
-                      <td>A+</td>
-                      <td>9</td>
-                    </tr>
-                    <tr>
-                      <td>15SE203</td>
-                      <td>SOFTWARE ENGINEERING PRINCIPLES</td>
-                      <td>3</td>
-                      <td>A+</td>
-                      <td>9</td>
-                    </tr>
+                    
                 </table>
                 </div>
 </v-layout>
@@ -94,7 +50,44 @@
       name:'performance',
       data() {
         return {
-        
+			records:[
+				{
+					code:"15SE203",
+					title:"Software Engineering Principles",
+					facName:"Dr. Preetha Evangeline",
+					surpTest:4,
+					assgn:4,
+					test1:13,
+					test2:24
+				},
+				{
+					code:"15SE203",
+					title:"Software Engineering Principles",
+					facName:"Dr. Preetha Evangeline",
+					surpTest:4,
+					assgn:4,
+					test1:13,
+					test2:24
+				},
+				{
+					code:"15SE203",
+					title:"Software Engineering Principles",
+					facName:"Dr. Preetha Evangeline",
+					surpTest:4,
+					assgn:4,
+					test1:13,
+					test2:24
+				},
+				{
+					code:"15SE203",
+					title:"Software Engineering Principles",
+					facName:"Dr. Preetha Evangeline",
+					surpTest:4,
+					assgn:4,
+					test1:13,
+					test2:24
+				}
+			]
         }
       }
 

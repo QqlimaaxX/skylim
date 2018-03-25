@@ -21,62 +21,14 @@
                   <th>GRADE POINT</th>
 				  </tr>
                     
-                    <tr>
-                      <td>15SE203</td>
-                      <td>SOFTWARE ENGINEERING PRINCIPLES</td>
-                      <td>3</td>
-                      <td>A+</td>
-                      <td>9</td>
+                    <tr v-for="(record,i) in records" :key=i>
+                      <td>{{record.code}}</td>
+                      <td>{{record.title}}</td>
+                      <td>{{record.creds}}</td>
+                      <td>{{record.grade}}</td>
+                      <td>{{record.gradept}}</td>
                     </tr>
-                    <tr>
-                      <td>15SE203</td>
-                      <td>SOFTWARE ENGINEERING PRINCIPLES</td>
-                      <td>3</td>
-                      <td>A+</td>
-                      <td>9</td>
-                    </tr>
-                    <tr>
-                      <td>15SE203</td>
-                      <td>SOFTWARE ENGINEERING PRINCIPLES</td>
-                      <td>3</td>
-                      <td>A+</td>
-                      <td>9</td>
-                    </tr>
-                    <tr>
-                      <td>15SE203</td>
-                      <td>SOFTWARE ENGINEERING PRINCIPLES</td>
-                      <td>3</td>
-                      <td>A+</td>
-                      <td>9</td>
-                    </tr>
-                    <tr>
-                      <td>15SE203</td>
-                      <td>SOFTWARE ENGINEERING PRINCIPLES</td>
-                      <td>3</td>
-                      <td>A+</td>
-                      <td>9</td>
-                    </tr>
-                    <tr>
-                      <td>15SE203</td>
-                      <td>SOFTWARE ENGINEERING PRINCIPLES</td>
-                      <td>3</td>
-                      <td>A+</td>
-                      <td>9</td>
-                    </tr>
-                    <tr>
-                      <td>15SE203</td>
-                      <td>SOFTWARE ENGINEERING PRINCIPLES</td>
-                      <td>3</td>
-                      <td>A+</td>
-                      <td>9</td>
-                    </tr>
-                    <tr>
-                      <td>15SE203</td>
-                      <td>SOFTWARE ENGINEERING PRINCIPLES</td>
-                      <td>3</td>
-                      <td>A+</td>
-                      <td>9</td>
-                    </tr>
+                    
                 </table>
                 </div>
 </v-layout>
@@ -94,7 +46,36 @@
       name:'credits',
       data() {
         return {
-        
+			records:[
+			{
+				code:"15SE203",
+				title:"Software Engineering Principles",
+				creds:3,
+				grade:"A+",
+				gradept:9
+			},
+			{
+				code:"15SE203",
+				title:"Mobile Application Development",
+				creds:3,
+				grade:"A+",
+				gradept:9
+			},
+			{
+				code:"15SE203",
+				title:"Computer Networks",
+				creds:3,
+				grade:"A+",
+				gradept:9
+			},
+			{
+				code:"15SE203",
+				title:"Computer System Architecture",
+				creds:3,
+				grade:"A+",
+				gradept:9
+			}
+			]
         }
       }
 
@@ -115,7 +96,7 @@
     .table,tr{
       border:1px solid #ADA1A1;
       margin-top:10px;
-	  /* margin-left: 60px; */
+	  margin-left: 37px;
       border-collapse: collapse;
       
     }
@@ -124,7 +105,7 @@
       font-size:12px;
       color:#615F5F;
       text-align:left;
-      padding:5px 20px ;
+      padding:5px 20px;
     }
     th{
       padding:5px 20px;
