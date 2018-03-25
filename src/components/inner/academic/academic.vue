@@ -6,6 +6,7 @@
       <router-link :to="{name:'credits'}" class="ui button">Credits</router-link>
       <router-link :to="{name:'performance'}" class="ui button">Performance</router-link>
       <router-link :to="{name:'syllabus'}" class="ui button">Syllabus</router-link>
+      <router-link :to="{name:'calendar'}" class="ui button">Calendar</router-link>
       <hr>
       <router-view></router-view>
 	</div>

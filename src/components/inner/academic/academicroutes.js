@@ -4,6 +4,7 @@ const arrears = () => import('./arrears/arrears.vue')
 const credits = () => import('./credits/credits.vue')
 const performance = () => import('./performance/performance.vue')
 const syllabus = () => import('./syllabus/syllabus.vue')
+const calendar = () => import('./calendar/calendar.vue')
 const academic = () => import('./academic.vue')
 
 // import attendance from './attendance/attendance.vue';
@@ -11,6 +12,7 @@ const academic = () => import('./academic.vue')
 // import credits from './credits/credits.vue';
 // import performance from './performance/performance.vue';
 // import syllabus from './syllabus/syllabus.vue';
+// import calendar from './calendar/calendar.vue';
 // import academic from './academic.vue';
 
 export default [
@@ -30,6 +32,10 @@ export default [
 	        path: 'credits', 
 	        name: 'credits', 
 	        component: credits
+  		},{
+	        path: 'calendar', 
+	        name: 'calendar', 
+	        component: calendar
   		},{
 	        path: 'performance', 
 	        name: 'performance', 
