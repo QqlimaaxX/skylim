@@ -148,14 +148,17 @@
       border:1px solid #ADA1A1;
       margin-top:20px;
       border-collapse: collapse;
-      
+      text-align: center;
+
     }
     
     td{
       font-size:12px;
       color:#615F5F;
       text-align:left;
-      padding:5px 20px ;
+      padding:5px 20px;
+      text-align: center;
+
     }
     th{
       padding:5px 20px;

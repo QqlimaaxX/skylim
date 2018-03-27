@@ -138,6 +138,7 @@
     border: 1px solid #ADA1A1;
     margin-top: 20px;
     border-collapse: collapse;
+    text-align: center;
 
   }
 
@@ -146,6 +147,8 @@
     color: #615F5F;
     text-align: left;
     padding: 5px 20px;
+    text-align: center;
+
   }
 
   th {

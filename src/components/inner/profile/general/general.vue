@@ -11,7 +11,8 @@
               <h4>General Profile</h4>
             </v-toolbar>
             <div class="outer_body">
-              <v-container style="font-size:18px">
+                  <img src="http://cameracornergreenbay.com/wp-content/uploads/2017/04/passport2.png" style="margin-top:50px;margin-left:20px;width:140px;height:180px;float:left">
+              <v-container style="font-size:18px;margin-left:20px">
                 <v-layout row wrap>
                   <v-flex lg4 offset-lg2 xs6>
                     <span>Name:</span>

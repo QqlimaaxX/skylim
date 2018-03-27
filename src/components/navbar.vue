@@ -42,7 +42,7 @@
             <v-expansion-panel-content v-for="(item,i) in items" :key="i" class="grey lighten-3">
               <div slot="header">
 				<router-link :to="item.link">
-                <v-icon class="mr-4" small>{{item.icon}}</v-icon>{{item.title}}
+                <v-icon class="mr-4" small>{{item.icon}}</v-icon><span class="pl-4">{{item.title}}</span>
 				</router-link>
 				</div>
 
@@ -51,7 +51,7 @@
                   <v-expansion-panel-content v-for="(sitem,j) in item.smenu1" :key="j" class="grey lighten-2" hide-actions>
                     <div slot="header">
 					<router-link :to="sitem.link">
-					  <v-icon class="mr-4" small>{{sitem.icon}}</v-icon>{{sitem.title}}
+					  <v-icon class="mr-4" small>{{sitem.icon}}</v-icon><span class="pl-4">{{sitem.title}}</span>
 					</router-link>
 					</div>
                   </v-expansion-panel-content>
@@ -217,9 +217,12 @@
 
   .nav-text {
     letter-spacing: 0.2em;
-    margin-left: 20px;
+    text-align: center;
     text-transform: uppercase;
     color: white;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 20ƒpx
+
   }
 
   /* .name-reg{

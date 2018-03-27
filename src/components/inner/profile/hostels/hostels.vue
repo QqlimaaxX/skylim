@@ -138,7 +138,7 @@ export default {
       border:1px solid #ADA1A1;
       margin-top:20px;
       border-collapse: collapse;
-      
+      text-align: center;
       
     }
     
@@ -147,6 +147,8 @@ export default {
       color:#615F5F;
       text-align:left;
       padding:5px 20px ;
+      text-align: center;
+
     }
     th{
       padding:5px 20px;
