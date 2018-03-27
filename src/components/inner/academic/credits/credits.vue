@@ -11,7 +11,8 @@
               
               <v-container>
                 <v-layout row wrap>
-                <div>
+              
+                <div style="overflow-x:scroll;">
                 <table class="table">
                   <tr>
                   <th>COURSE CODE</th>
@@ -31,6 +32,7 @@
                     
                 </table>
                 </div>
+              
 </v-layout>
 
               </v-container>

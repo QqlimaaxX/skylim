@@ -76,6 +76,7 @@
               </v-container>
               <v-container>
                 <v-layout row wrap>
+                  <v-flex lg12>
                   <div style="overflow-x:scroll;">
                     <table class="table">
                       <tr>
@@ -101,7 +102,9 @@
                       </tr>
                     </table>
                   </div>
+                  </v-flex>
                 </v-layout>
+                
 
               </v-container>
             </div>
@@ -131,43 +134,40 @@ export default {
     font-size: 16px;
   }
 
-  .table,
-  tr {
-    border: 1px solid #ADA1A1;
-    margin-top: 20px;
-    border-collapse: collapse;
+  .table,tr{
+      border:1px solid #ADA1A1;
+      margin-top:20px;
+      border-collapse: collapse;
+      
+      
+    }
+    
+    td{
+      font-size:12px;
+      color:#615F5F;
+      text-align:left;
+      padding:5px 20px ;
+    }
+    th{
+      padding:5px 20px;
+      font-size:13px;
+ color: white;
+ background: #0E0EEB;
 
-  }
+    }
+    tr:nth-child(even){background-color: #f2f2f2}
 
-  td {
-    font-size: 12px;
-    color: #615F5F;
-    text-align: left;
-    padding: 5px 20px;
-  }
+    h4 {
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 20px;
+      padding-left: 25px;
+    }
+    
 
-  th {
-    padding: 5px 20px;
-    font-size: 13px;
-    color: white;
-    background: #0E0EEB;
-
-  }
-
-
-
-  h4 {
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    padding-left: 25px;
-  }
-
-
-  span {
-    font-weight: 1000px;
-    color: #0C0C0C;
-    font-size: 15px;
-  }
-
+    span {
+      font-weight: 1000px;
+      color: #0C0C0C;
+      font-size: 15px;
+    }
 </style>
