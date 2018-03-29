@@ -5,7 +5,7 @@
         <v-layout row wrap class="text-xs-left">
           <v-flex lg8 offset-lg3 xs12 sm12>
             <v-toolbar class="blue darken" style="border-radius:7px 7px 0px 0px;height:52px">
-              <h4>FEES PAID</h4>
+              <h4>MISBEHAVIOUR RECORD</h4>
             </v-toolbar>
             <div class="outer_part">
               
@@ -47,8 +47,8 @@
 			records:[
 				{
 					date:"29/9/15",
-					desc:"Copying in exam",
-					pun:"Detained"
+					desc:"Copying in exam Non esse tempor nostrud magna pariatur reprehenderit enim.",
+					pun:"Detained Ea sint est nostrud exercitation do ipsum et labore dolore cillum deserunt velit occaecat sit."
 				},
 				{
 					date:"29/9/15",

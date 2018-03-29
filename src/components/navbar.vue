@@ -151,11 +151,11 @@
         {
           title: "FINANCIAL DETAILS",
 		  icon: "question_answer",
-		  link:{name:'feestructure'},
+		  link:{name:'feeStructure'},
           smenu1: [{
               title: "FEE STRUCTURE",
 			  icon: "question_answer",
-			  link:{name:'feestructure'}
+			  link:{name:'feeStructure'}
             },
             {
               title: "FEE PAID",
@@ -220,7 +220,7 @@
     text-align: center;
     text-transform: uppercase;
     color: white;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 20ƒpx
 
   }

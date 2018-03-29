@@ -1,6 +1,6 @@
 //lazy loading
 
-const feeStructure = () => import('./feeStructure/feeStructure.vue')
+const feeStructure = () => import('./feestructure/feeStructure.vue')
 const feepaid = () => import('./feepaid/feepaid.vue')
 const feedue = () => import('./feedue/feedue.vue')
 const financialDetails = () => import('./financialDetails.vue')
@@ -17,8 +17,8 @@ export default [
 		name:"financialdetails",
 		component:financialDetails,		
 	  	children:[{
-	        path: 'feestructure', 
-	        name: 'feestructure', 
+	        path: 'feeStructure', 
+	        name: 'feeStructure', 
 	        component: feeStructure
 	    },{
 	        path: 'feedue', 

@@ -7,7 +7,7 @@
         <v-layout row wrap class="text-xs-left">
 
           <v-flex lg7 offset-lg3>
-            <v-toolbar class="blue darken" style="border-radius:7px 7px 0px 0px;height:52px">
+            <v-toolbar  style="border-radius:7px 7px 0px 0px;height:52px;background-color:#77ae42">
               <h4>General Profile</h4>
             </v-toolbar>
             <div class="outer_body">
@@ -175,7 +175,6 @@
     data() {
       return {
 
-
       }
     }
   }
@@ -187,7 +186,7 @@
     padding: 20px;
     border-style: solid;
     border-width: 0px 1.5px 1.5px 1.5px;
-    border-color: #42A5F5;
+    border-color: #77ae42;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 100;
     color: #5C5A5A
