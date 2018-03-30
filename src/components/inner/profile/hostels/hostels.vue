@@ -14,7 +14,8 @@
                     <span>Hostel:</span>
                   </v-flex>
                   <v-flex>
-                    <span>Yes</span>
+                    <p v-show="hostel.hostel">Yes</p>
+                    <p v-show="!hostel.hostel">No</p>
                   </v-flex>
 
                 </v-layout>
@@ -23,13 +24,13 @@
                     <span>Hostel Name:</span>
                   </v-flex>
                   <v-flex lg3 xs6 sm3>
-                    Malligai
+                    {{hostel.name}}
                   </v-flex>
                   <v-flex lg3 xs5 sm3>
                     <span>Block:</span>
                   </v-flex>
                   <v-flex lg3 xs6 sm3>
-                    F BLOCK
+                    {{hostel.type}}
                   </v-flex>
                 </v-layout>
                 <v-layout row wrap>
@@ -37,13 +38,13 @@
                     <span>Room No.:</span>
                   </v-flex>
                   <v-flex lg3 xs6 sm3>
-                    407
+                    {{hostel.room}}
                   </v-flex>
                   <v-flex lg3 xs5 sm3>
                     <span>Room Type:</span>
                   </v-flex>
                   <v-flex lg3 xs6 sm3>
-                    Two (Attached Non AC)
+                    {{hostel.roomtype}}
                   </v-flex>
 
 
@@ -53,23 +54,24 @@
                     <span>Fee Amount:</span>
                   </v-flex>
                   <v-flex lg3 xs6 sm3>
-                    150000.0
+                    {{hostel.amt}}
                   </v-flex>
                   <v-flex lg3 xs5 sm3>
                     <span>Pay Type:</span>
                   </v-flex>
                   <v-flex lg3 xs6 sm3>
-                    Online
+                    {{hostel.paymentmode}}
                   </v-flex>
 
                 </v-layout>
                 <v-layout row wrap>
 
                   <v-flex lg3 xs5 sm3>
-                    <span>Laundary:</span>
+                    <span>Laundry:</span>
                   </v-flex>
                   <v-flex xs6>
-                    Yes
+                    <p v-if="hostel.laundry">Yes</p>
+                    <p v-else>No</p>
                   </v-flex>
 
                 </v-layout>
@@ -91,13 +93,15 @@
                       </tr>
 
                       <tr>
-                        <td>Malligai</td>
-                        <td>F Block</td>
-                        <td>407</td>
-                        <td>150000</td>
-                        <td>Yes</td>
-                        <td>Active</td>
-                        <td>2014-12-15 2:04:25PM</td>
+                        <td>{{hostel.name}}</td>
+                        <td>{{hostel.type}}</td>
+                        <td>{{hostel.room}}</td>
+                        <td>{{hostel.amt}}</td>
+                        <td v-if="hostel.laundry">Yes</td>
+                        <td v-else>No</td>
+                        <td v-if="hostel.status">Active</td>
+                        <td v-else>Inactive</td>
+                        <td>{{hostel.assdate}}</td>
                         <td>halls</td>
                       </tr>
                     </table>
@@ -117,7 +121,23 @@
 
 <script>
 export default {
-  name:'hostels'
+  name:'hostels',
+  data(){
+    return{
+      hostel:{
+        hostel:true,
+        name:'Malligai',
+        type:'F block',
+        room:419,
+        amt:150000,
+        laundry:true,
+        status:true,
+        assdate:'2014-12-15 2:04:25PM',
+        roomtype:'Two (Attached Non AC)',
+        paymentmode:'Online'
+      }
+    }
+  }
 }
 </script>
 

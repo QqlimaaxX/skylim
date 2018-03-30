@@ -14,7 +14,8 @@
                     <span>Transport</span>
                   </v-flex>
                   <v-flex xs6>
-                    <span>Yes</span>
+                    <p v-show="transport.transport">Yes</p>
+                    <p v-show="!transport.transport">No</p> 
                   </v-flex>
 
                 </v-layout>
@@ -23,44 +24,28 @@
                     <span>Route Name:</span>
                   </v-flex>
                   <v-flex lg3 xs6 sm3>
-                    LB Nagar-KPHB
+                    {{transport.route}}
                   </v-flex>
-                  <v-flex lg3 xs5 sm3>
-                    <span>Vehicle Type:</span>
-                  </v-flex>
-                  <v-flex lg3 xs6 sm3>
-                    car
-                  </v-flex>
+                
                 </v-layout>
                 <v-layout row wrap>
                   <v-flex lg3 xs5 sm3>
                     <span>Vehicle:</span>
                   </v-flex>
                   <v-flex lg3 xs6 sm3>
-                    AP09C
+                    {{transport.vehicle}}
                   </v-flex>
-                  <v-flex lg3 xs5 sm3>
-                    <span>Seating Capacity:</span>
-                  </v-flex>
-                  <v-flex lg3 xs6 sm3>
-                    60
-                  </v-flex>
-
+                 
 
                 </v-layout>
                 <v-layout row wrap>
                   <v-flex lg3 xs5 sm3>
-                    <span>Route Amount:</span>
+                    <span>Amount:</span>
                   </v-flex>
                   <v-flex lg3 xs6 sm3>
-                    500
+                    {{transport.amt}}
                   </v-flex>
-                  <v-flex lg3 xs5 sm3>
-                    <span>Alloted Seats:</span>
-                  </v-flex>
-                  <v-flex lg3 xs6 sm3>
-                    024
-                  </v-flex>
+                  
 
                 </v-layout>
                 <v-layout row wrap>
@@ -69,7 +54,7 @@
                     <span>Stop Name:</span>
                   </v-flex>
                   <v-flex xs7>
-                    Chadarghat 06:00PM
+                    {{transport.stop}}
                   </v-flex>
 
                 </v-layout>
@@ -80,7 +65,6 @@
                 <table class="table" >
                   <tr>
                   <th>Route Name</th>
-                  <th>Type</th>
                   <th>Vehicle No.</th>
                   <th>Amount</th>
                   <th>Stop Name</th>
@@ -90,25 +74,15 @@
                     </tr>
                     
                     <tr>
-                      <td>LB Nagar-KPHB</td>
-                      <td>Car</td>
-                      <td>AP09</td>
-                      <td>500</td>
-                      <td>Chandraghat 06:00PM</td>
-                      <td>Active</td>
-                      <td>2014-12-15 2:04:25PM</td>
+                      <td>{{transport.route}}</td>
+                      <td>{{transport.vehicle}}</td>
+                      <td>{{transport.amt}}</td>
+                      <td>{{transport.stop}}</td>
+                      <td v-if="transport.status">Active</td>
+                      <td v-else>Inactive</td>
+                      <td>{{transport.assdate}}</td>
                       <td>halls</td>
                     </tr>
-                      <tr>
-                        <td>LB Nagar-KPHB</td>
-                        <td>Car</td>
-                        <td>AP09</td>
-                        <td>500</td>
-                        <td>Chandraghat 06:00PM</td>
-                        <td>Active</td>
-                        <td>2014-12-15 2:04:25PM</td>
-                        <td>halls</td>
-                      </tr>
                 </table>
                 </div>
 </v-layout>
@@ -122,11 +96,20 @@
   </div>
   </template>
   <script>
+    //VALID TILL?
     export default {
       name:'transport',
       data() {
         return {
-        
+          transport:{
+            transport:true,
+            route:'LB Nagar-KPHB',
+            vehicle:'TN-1J-1513',
+            amt:3570,
+            stop:'MMnagar 6:00PM',
+            assdate:'2014-12-15 2:04:25PM',
+            status:true
+          }
         }
       }
 
@@ -184,3 +167,10 @@
     }
 
   </style>
+
+
+
+
+
+
+

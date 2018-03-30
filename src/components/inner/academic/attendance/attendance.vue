@@ -14,7 +14,7 @@
                                 <div style="overflow-x:scroll;">
                                    
                                     <table class="table">
-                                    <h3>Semester-1</h3>
+                                    
                                         <tr>
                                             <th>Code</th>
                                             <th>Title</th>
@@ -27,83 +27,18 @@
                                             <th>Attendance %</th>
                                         </tr>
 
-                                        <tr>
-                                            <td>15016J</td>
-                                            <td>OOPS</td>
-                                            <td>Theory</td>
-                                            <td>150</td>
-                                            <td>Hallys</td>
-                                            <td>D</td>
-                                            <td>52</td>
-                                            <td>8</td>
-                                            <td>94</td>
+                                        <tr v-for="(i,j) in attendance" :key="j">
+                                            <td>{{i.code}}</td>
+                                            <td>{{i.name}}</td>
+                                            <td>{{i.type}}</td>
+                                            <td>{{i.room}}</td>
+                                            <td>{{i.faculty}}</td>
+                                            <td>{{i.slot}}</td>
+                                            <td>{{i.hours}}</td>
+                                            <td>{{i.absent}}</td>
+                                            <td>{{i.percent}}%</td>
                                         </tr>
-                                        <tr>
-                                            <td>15016J</td>
-                                            <td>OOPS</td>
-                                            <td>Theory</td>
-                                            <td>150</td>
-                                            <td>Hallys</td>
-                                            <td>D</td>
-                                            <td>52</td>
-                                            <td>8</td>
-                                            <td>94</td>
-                                        </tr>
-                                        <tr>
-                                            <td>15016J</td>
-                                            <td>OOPS</td>
-                                            <td>Theory</td>
-                                            <td>150</td>
-                                            <td>Hallys</td>
-                                            <td>D</td>
-                                            <td>52</td>
-                                            <td>8</td>
-                                            <td>94</td>
-                                        </tr>
-                                        <tr>
-                                            <td>15016J</td>
-                                            <td>OOPS</td>
-                                            <td>Theory</td>
-                                            <td>150</td>
-                                            <td>Hallys</td>
-                                            <td>D</td>
-                                            <td>52</td>
-                                            <td>8</td>
-                                            <td>94</td>
-                                        </tr>
-                                        <tr>
-                                            <td>15016J</td>
-                                            <td>OOPS</td>
-                                            <td>Theory</td>
-                                            <td>150</td>
-                                            <td>Hallys</td>
-                                            <td>D</td>
-                                            <td>52</td>
-                                            <td>8</td>
-                                            <td>94</td>
-                                        </tr>
-                                        <tr>
-                                            <td>15016J</td>
-                                            <td>OOPS</td>
-                                            <td>Theory</td>
-                                            <td>150</td>
-                                            <td>Hallys</td>
-                                            <td>D</td>
-                                            <td>52</td>
-                                            <td>8</td>
-                                            <td>94</td>
-                                        </tr>
-                                        <tr>
-                                            <td>15016J</td>
-                                            <td>OOPS</td>
-                                            <td>Theory</td>
-                                            <td>150</td>
-                                            <td>Hallys</td>
-                                            <td>D</td>
-                                            <td>52</td>
-                                            <td>8</td>
-                                            <td>94</td>
-                                        </tr>
+                                        
                                     </table>
                                 </div>
                           
@@ -116,6 +51,31 @@
     </v-app>
   </div>
 </template>
+
+<script>
+export default {
+  data(){
+      return{
+          attendance:[
+              {
+                  name:'Mobile Application Development',
+                  code:'15SE203',
+                  type:'THEORY',
+                  room:400,
+                  faculty:'C Vijayakumaran',
+                  slot:'F',
+                  hours:16,
+                  absent:4,
+                  percent:75
+              }
+          ]
+      }
+  }
+}
+</script>
+
+
+
 <style scoped>
     .outer_part {
     padding: 20px;
