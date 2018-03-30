@@ -67,6 +67,50 @@ export default {
                   hours:16,
                   absent:4,
                   percent:75
+              },
+              {
+                  name:'Mobile Application Development',
+                  code:'15SE203',
+                  type:'THEORY',
+                  room:400,
+                  faculty:'C Vijayakumaran',
+                  slot:'F',
+                  hours:16,
+                  absent:4,
+                  percent:75
+              },
+              {
+                  name:'Mobile Application Development',
+                  code:'15SE203',
+                  type:'THEORY',
+                  room:400,
+                  faculty:'C Vijayakumaran',
+                  slot:'F',
+                  hours:16,
+                  absent:4,
+                  percent:75
+              },
+              {
+                  name:'Mobile Application Development',
+                  code:'15SE203',
+                  type:'THEORY',
+                  room:400,
+                  faculty:'C Vijayakumaran',
+                  slot:'F',
+                  hours:16,
+                  absent:4,
+                  percent:75
+              },
+              {
+                  name:'Mobile Application Development',
+                  code:'15SE203',
+                  type:'THEORY',
+                  room:400,
+                  faculty:'C Vijayakumaran',
+                  slot:'F',
+                  hours:16,
+                  absent:4,
+                  percent:75
               }
           ]
       }
@@ -77,45 +121,6 @@ export default {
 
 
 <style scoped>
-    .outer_part {
-    padding: 20px;
-    border-style: solid;
-    border-width: 0px 1.5px 1.5px 1.5px;
-    border-color: #42A5F5;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 100;
-    color: #5C5A5A;
-    font-size: 16px;
-  }
-    h4 {
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    padding-left: 25px;
-  }
-   .table,
-  tr {
-    border: 1px solid #ADA1A1;
-    margin-top: 20px;
-    border-collapse: collapse;
-    text-align: center;
+    @import './../../style.css';
 
-  }
-
-  td {
-    font-size: 12px;
-    color: #615F5F;
-    text-align: left;
-    padding: 5px 20px;
-    text-align: center;
-
-  }
-
-  th {
-    padding: 5px 20px;
-    font-size: 13px;
-    color: white;
-    background: #0E0EEB;
-
-  }
 </style>

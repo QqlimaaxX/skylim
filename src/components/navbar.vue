@@ -37,12 +37,12 @@
         <v-divider></v-divider>
 
         <v-list dense>
-          <v-expansion-panel focusable expand>
+          <v-expansion-panel focusable>
 
             <v-expansion-panel-content v-for="(item,i) in items" :key="i" class="grey lighten-3">
               <div slot="header">
 				<router-link :to="item.link">
-                <v-icon class="mr-4" small>{{item.icon}}</v-icon><span class="pl-4">{{item.title}}</span>
+                <v-icon class="mr-4" style="font-size:20px">{{item.icon}}</v-icon><span class="pl-4">{{item.title}}</span>
 				</router-link>
 				</div>
 
@@ -51,7 +51,7 @@
                   <v-expansion-panel-content v-for="(sitem,j) in item.smenu1" :key="j" class="grey lighten-2" hide-actions>
                     <div slot="header">
 					<router-link :to="sitem.link">
-					  <v-icon class="mr-4" small>{{sitem.icon}}</v-icon><span class="pl-4">{{sitem.title}}</span>
+					  <v-icon class="mr-4" style="font-size:20px">{{sitem.icon}}</v-icon><span class="pl-4">{{sitem.title}}</span>
 					</router-link>
 					</div>
                   </v-expansion-panel-content>
@@ -92,108 +92,108 @@
       reg: "RA16111000031",
       items: [{
           title: "PROFILE",
-		  icon: "dashboard",
+		  icon: "account_circle",
 		  link:{name:'general'},
           smenu1: [{
               title: "GENERAL",
-			  icon: "question_answer",
+			  icon: "person",
 			  link:{name:'general'}
             },
             {
               title: "HOSTELS",
-			  icon: "question_answer",
+			  icon: "home",
 			  link:{name:'hostels'}
             },
             {
               title: "TRANSPORT",
-			  icon: "question_answer",
+			  icon: "directions_bus",
 			  link:{name:'transport'}
             },
             {
-              title: "PROFILE UPDATE",
-			  icon: "question_answer",
+              title: "EDIT PROFILE",
+			  icon: "mode_edit",
 			  link:{name:'update'}
             }
           ]
         },
         {
           title: "ACADEMIC",
-		  icon: "question_answer",
+		  icon: "school",
     	  link:{name:'attendance'},
           smenu1: [{
               title: "ATTENDANCE",
-			  icon: "question_answer",
+			  icon: "perm_contact_calendar",
 			  link:{name:'attendance'}
             },
             {
               title: "CREDIT/MARKS",
-			  icon: "question_answer",
+			  icon: "insert_chart",
 			  link:{name:'credits'}
 			  
             },
             {
               title: "ARREARS",
-			  icon: "question_answer",
+			  icon: "sentiment_neutral",
 			  link:{name:'arrears'}
             },
             {
               title: "PERFORMANCE",
-			  icon: "question_answer",
+			  icon: "trending_up",
 			  link:{name:'performance'}
             },
             {
               title: "SYLLABUS",
-			  icon: "question_answer",
+			  icon: "picture_as_pdf",
 			  link:{name:'syllabus'}
             }
           ]
         },
         {
-          title: "FINANCIAL DETAILS",
-		  icon: "question_answer",
+          title: "FEES DETAILS",
+		  icon: "payment",
 		  link:{name:'feeStructure'},
           smenu1: [{
               title: "FEE STRUCTURE",
-			  icon: "question_answer",
+			  icon: "payment",
 			  link:{name:'feeStructure'}
             },
             {
               title: "FEE PAID",
-			  icon: "question_answer",
+			  icon: "payment",
 			  link:{name:'feepaid'}
             },
             {
               title: "FEE DUE",
-			  icon: "question_answer",
+			  icon: "payment",
 			  link:{name:'feedue'}
             }
           ]
         },
         {
           title: "DEFAULTERS",
-		  icon: "question_answer",
+		  icon: "assignment_late",
 		  link:{name:'malpractice'},
           smenu1: [{
               title: "MALPRACTICE",
-			  icon: "question_answer",
+			  icon: "sentiment_very_dissatisfied",
 			  link:{name:'malpractice'}
             },
             {
               title: "DETENTION",
-			  icon: "question_answer",
+			  icon: "face",
     	      link:{name:'detention'}
 
             },
             {
               title: "MISBEHAVIOUR",
-			  icon: "question_answer",
+			  icon: "error_outline",
     	      link:{name:'misbehaviour'}
             }
           ]
         },
         {
           title: "FEEDBACK",
-		  icon: "dashboard",
+		  icon: "comment",
 		  link:{name:'feedback'}
         }
       ],
