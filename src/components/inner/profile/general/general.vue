@@ -179,6 +179,11 @@
           mother:'Lohn Doe'
         }
       }
+    },
+    methods:{
+      nikalo(){
+        this.$store.commit('decrement')
+      }
     }
   }
 

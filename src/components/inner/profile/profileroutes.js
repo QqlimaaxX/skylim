@@ -17,26 +17,40 @@ export default [
         path: '/app/profile', 
         name: 'profile', 
         component: profile,
+        meta:{
+            reqAuth:true
+        },
         children:[{
             path: 'general', 
             name: 'general', 
             component: general,
-            // components:{special:general}
+            meta:{
+                reqAuth:true
+            }
             },
             {
             path: 'update', 
             name: 'update', 
-            component: update
+            component: update,
+            meta:{
+                reqAuth:true
+            }
             },
             {
             path: 'hostels', 
             name: 'hostels', 
-            component: hostels
+            component: hostels,
+            meta:{
+                reqAuth:true
+            }
             },
             {
             path: 'transport', 
             name: 'transport', 
-            component: transport
+            component: transport,
+            meta:{
+                reqAuth:true
+            }
             }
         ]
     },

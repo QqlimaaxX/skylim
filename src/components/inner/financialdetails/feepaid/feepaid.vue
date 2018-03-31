@@ -11,7 +11,7 @@
               
               <v-container>
                 <v-layout row wrap>
-                <div>
+                <div class="tableContainer">
                 <table class="table">
                   <tr>
                   <th>COLLEGE TRANSACTION ID</th>

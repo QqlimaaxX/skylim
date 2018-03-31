@@ -24,10 +24,19 @@
           <!-- <hr> -->
           <v-container style="padding: 3% 0;">
             <v-layout row>
-
-              <v-flex lg4 xs4 v-for="(icon,i) in icons" :key="i">
+              <v-flex lg4 xs4>
                 <v-btn small block fab flat depressed class="center" color="white">
-                  <v-icon medium>{{ icon }}</v-icon>
+                  <v-icon medium>date_range</v-icon>
+                </v-btn>
+              </v-flex>
+              <v-flex lg4 xs4>
+                <v-btn small block fab flat depressed class="center" color="white">
+                  <v-icon medium>event</v-icon>
+                </v-btn>
+              </v-flex>
+              <v-flex lg4 xs4>
+                <v-btn small block fab flat depressed @click="nikalo" class="center" color="white">
+                  <v-icon medium>power_settings_new</v-icon>
                 </v-btn>
               </v-flex>
             </v-layout>
@@ -47,7 +56,7 @@
 				</div>
 
               <div class="grey lighten-2">
-                <v-expansion-panel class="shift">
+                <v-expansion-panel focusable class="shift">
                   <v-expansion-panel-content v-for="(sitem,j) in item.smenu1" :key="j" class="grey lighten-2" hide-actions>
                     <div slot="header">
 					<router-link :to="sitem.link">
@@ -84,11 +93,6 @@
       logo: "logo",
 
       drawer: null,
-      icons: [
-        "date_range",
-        "event",
-        "power_settings_new"
-      ],
       reg: "RA16111000031",
       items: [{
           title: "PROFILE",
@@ -201,6 +205,11 @@
     }),
     props: {
       source: String
+    },methods:{
+      nikalo(){
+        window.localStorage.removeItem('username')
+        this.$router.push({path:'/login'})
+      }
     }
   }
 
