@@ -70,7 +70,6 @@
           </v-expansion-panel>
 
         </v-list>
-        </v-list>
       </v-navigation-drawer>
       <v-toolbar color="blue-grey darken-2" dark app :clipped-left="$vuetify.breakpoint.mdAndUp" fixed>
         <v-toolbar-title style="width: 100px" class="ml-0 pl-0">
