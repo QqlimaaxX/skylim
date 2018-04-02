@@ -14,8 +14,8 @@
                     <span>Transport</span>
                   </v-flex>
                   <v-flex xs6>
-                    <p v-show="transport.transport">Yes</p>
-                    <p v-show="!transport.transport">No</p> 
+                    <p v-show="transport.active">Yes</p>
+                    <p v-show="!transport.active">No</p> 
                   </v-flex>
 
                 </v-layout>
@@ -102,7 +102,7 @@
       data() {
         return {
           transport:{
-            transport:true,
+            active:true,
             route:'LB Nagar-KPHB',
             vehicle:'TN-1J-1513',
             amt:3570,

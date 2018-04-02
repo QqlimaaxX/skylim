@@ -26,11 +26,21 @@
             <v-layout row>
               <v-flex lg4 xs4>
                 <v-btn small block fab flat depressed class="center" color="white">
+                  <v-icon medium>home</v-icon>
+                </v-btn>
+              </v-flex>
+              <v-flex lg4 xs4>
+                <v-btn small block fab flat depressed class="center" color="white">
                   <v-icon medium>date_range</v-icon>
                 </v-btn>
               </v-flex>
               <v-flex lg4 xs4>
                 <v-btn small block fab flat depressed class="center" color="white">
+                  <v-icon medium>date_range</v-icon>
+                </v-btn>
+              </v-flex>
+              <v-flex lg4 xs4>
+                <v-btn small block fab flat depressed @click="printy" class="center" color="white">
                   <v-icon medium>event</v-icon>
                 </v-btn>
               </v-flex>
@@ -86,6 +96,8 @@
 </template>
 
 <script>
+  import jsPDF from 'jspdf'
+
   export default {
     data: () => ({
       name: "Harry Porter",
@@ -208,6 +220,12 @@
       nikalo(){
         window.localStorage.removeItem('username')
         this.$router.push({path:'/login'})
+      },
+      printy(){
+        let pdfName = 'test'; 
+        var doc = new jsPDF();
+        doc.text("Hello World", 10, 10);
+        doc.save(pdfName + '.pdf');
       }
     }
   }

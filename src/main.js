@@ -6,6 +6,8 @@ import router from './router.js'
 import css from 'vuetify/dist/vuetify.min.css' 
 import Vuex from 'vuex'
 import {store} from './store/store'
+import jsPDF from 'jspdf'
+
 
 Vue.use(VueRouter)
 Vue.use(Vuetify)
